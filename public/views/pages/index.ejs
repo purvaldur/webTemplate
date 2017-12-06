@@ -2,15 +2,27 @@
 <html lang="en">
     <head>
         <% include ../partials/head %>
+
+        <!-- TEMPLATE SPECIFIC HEAD -->
         <title>Thorvald Kjartansson</title>
+        <link rel="stylesheet" href="../../css/temp.css">
+        <!-- TEMPLATE SPECIFIC HEAD -->
+
     </head>
     <body>
-        <div id="app">
-            <v-app>
-                <main>
-                    <v-container>Hello world</v-container>
-                </main>
-            </v-app>
+        <div id="app" class="baseline">
+
+            <!-- TEMPLATE SPECIFIC BODY -->
+            <div class="container">
+                <h1>Template {{ type }} made using</h1>
+                <div class="imgs">
+                    <img :src="vueLogo" alt="">
+                    <img :src="nodeLogo" alt="">
+                </div>
+                <h1>Author: {{ author }}</h1>
+            </div>
+            <!-- TEMPLATE SPECIFIC BODY -->
+
         </div>
         <% include ../partials/scripts %>
         <script src="../../js/main.js" charset="utf-8"></script>
